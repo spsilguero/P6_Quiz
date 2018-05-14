@@ -170,7 +170,7 @@ exports.randomplay = function (req, res, next) {
             return ids[randomPos];
     }
 
-    models.Quiz.findAll()
+    models.quiz.findAll()
     .then(function (quizzes) {
 
         for (var i in quizzes) {
@@ -189,7 +189,7 @@ exports.randomplay = function (req, res, next) {
                 randomId = getRandomId();
             }
             req.session.ramdomPlay.push(randomId);
-            return models.Quiz.findById(randomId);  
+            return models.quiz.findById(randomId);  
         }
 
     })

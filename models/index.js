@@ -29,4 +29,4 @@ sequelize.sync()
 
 
 module.exports = sequelize;
-exports.Quiz = Quiz;
+//exports.Quiz = quiz;
