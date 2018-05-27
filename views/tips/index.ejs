@@ -11,6 +11,7 @@
 
             <li>
                 <%= tip.text %>
+                <span id="autor"><%= tip.author.username %></span>
 
                 <% if (!accepted && (isAdmin || isQuizAuthor)) { %>
 
