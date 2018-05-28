@@ -94,10 +94,16 @@ exports.destroy = (req, res, next) => {
 // GET /quizzes/:quizId/tips/:tipId/edit
 exports.edit = (req, res, next) => {
 
-    const {quiz} = req.quiz;
-    const {tip} = req.tip;
+    const quiz = req.quiz;
+    const tip = req.tip;
 
-    res.render('tips/edit', {quiz, tip});
+    console.log(quiz);
+    console.log(tip);
+
+    res.render('tips/edit', {
+        tip,
+        quiz
+    });
 };
 
 // PUT/quizzes/:quizId/tips/:tipId
